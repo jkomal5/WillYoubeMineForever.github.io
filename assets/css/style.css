@@ -371,7 +371,7 @@ footer {
   .about ul li, 
   .ourStory ul li {
     display: block;
-    width: 50%;
+    width: 80%;
     margin: 30px auto;
   }
   .ourStory ul li {
@@ -394,14 +394,22 @@ footer {
   nav ul { text-align: center; }
   
   h1 {
-    width: 21%; 
+    width: 40%; 
     margin: 0 auto;
   }
 
-  .menu { float: none; }
+  .menu { 
+    padding: 20px;
+    float: none; 
+   }
   h3 { font-size: 30px; }
   .banner .wrapper { height: 350px; }
-  .menu li { padding: 0 5px ; }
+  .menu li { 
+    display: block; 
+    width: 80%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
 
   .question ul li {
     display: block;
