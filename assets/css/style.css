@@ -1,0 +1,419 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  vertical-align: top;
+  font: inherit;
+  font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block; }
+
+/* Force scrollbar */
+html { 
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button { cursor: pointer; }
+
+strong {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: rgb(255, 246, 246);
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1351px;
+  width: 82%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+header {
+  width: 100%;
+  padding: 8px 0 ;
+  position: absolute;
+  background-color: rgba(255, 39, 39, 0.5);
+}
+
+h1,
+nav{ display: inline-block; }
+h1 { width: calc(22% - 4px); }
+nav { width: calc(78% - 4px); }
+
+h1 a {
+  background-color: #ff1717;
+  padding: 20px 27px;
+  border-radius: 50%;
+}
+
+h1 p {
+  font-size: 15px;
+  color: #fff;
+  font-family: 'Engagement', cursive;
+  text-transform: uppercase;
+}
+
+h1 figure {
+  width: 25px;
+  padding-left: 14px;
+}
+
+.menu {
+  padding-top: 42px; 
+  float: right;
+}
+
+.menu li { padding: 0 15px ; }
+
+.menu a {
+  border-bottom: 1px solid transparent;
+  color: #fdfdfd;
+  font-size: 18px;
+  letter-spacing: 1px;
+  -webkit-transition: border-bottom .5s ease;
+  -moz-transition: border-bottom .5s ease;
+  -ms-transition: border-bottom .5s ease;
+  -o-transition: border-bottom .5s ease;
+  transition: border-bottom .5s ease;
+  text-transform: capitalize;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif
+}
+
+.menu a:hover { border-bottom: 1px solid #fdfdfd; }
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+/* banner styling starts here */
+.banner .wrapper {
+  width: 100%;
+  height: 630px;
+  overflow: hidden;
+}
+/* banner styling ends here */
+
+/* about section styling starts here */
+.about {
+  padding: 25px 0;
+}
+
+h3 {
+  padding-bottom: 25px;
+  font-size: 40px;
+  font-family: 'Engagement', cursive;
+  text-transform: uppercase;
+  color: rgba(255, 39, 39, 0.5);
+  text-align: center;
+}
+
+h3::before{
+  content:"\f004";
+  font: 900 17px "Font Awesome 5 Free";
+  color: rgb(255, 101, 101);
+  padding-right: 10px;
+}
+h3::after {
+  content:"\f004";
+  font: 900 17px "Font Awesome 5 Free";
+  color: rgb(255, 101, 101);
+  padding-left: 10px;
+}
+
+
+.about ul li{
+  display: inline-block;
+  width: 30%;
+  margin: 0 9%;
+  text-align: center;
+  box-shadow: 10px 10px 8px 5px rgba(255, 39, 39, 0.5);
+  overflow: hidden;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.about li figure {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.about li figure:hover { transform: scale(1.1); }
+
+h4 {
+  padding: 30px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(53, 53, 53);
+}
+
+h4 span {
+  padding-left: 5px;
+  font-weight: 100;
+}
+
+.about p {
+  font-family: 'Arvo', serif;
+  font-size: 15px;
+  padding: 15px;
+  line-height: 20px;
+  color: #666;
+}
+
+/* about section styling ends here  */
+.ourStory {
+  padding: 0 0 20px;
+}
+
+.ourStory div > p{
+  text-align: center;
+  color: #666;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.ourStory ul li {
+  display: inline-block;
+  width: 28%;
+  padding: 25px 2% 15px;
+  border-right: 1px solid #666;
+}
+
+.ourStory ul li:nth-child(3) { border-right: 0; }
+
+.ourStory figure {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.ourStory h4 { text-align: center; }
+
+.ourStory p {
+  font-family: 'Arvo', serif;
+  font-size: 15px;
+  padding: 10px;
+  line-height: 20px;
+  color: #666;
+}
+
+.question p {
+  font-size: 25px;
+  text-align: center;
+  animation: changing 5s infinite;
+  padding-bottom: 20px;
+}
+
+@keyframes changing {
+  0% {color: rgb(255, 24, 24);}
+  25% {color: rgb(255, 101, 101);}
+  50% {color: rgb(255, 164, 164);}
+  75% {color: rgb(255, 101, 101);}
+  100% {color: rgb(255, 24, 24);}
+}
+
+.question ul li {
+  display: inline-block;
+  width: 39%;
+  padding: 20px 3%;
+  margin: 0 2%;
+  background-color: rgb(255, 122, 122);
+  border-radius: 5%;
+  transition: all .8s ease;
+  border: 1px solid rgb(255, 246, 246);
+  text-transform: capitalize;
+}
+
+.question ul li:hover {
+  border: 1px solid #ff0000;
+  background-color: rgb(255, 246, 246);
+}
+
+.thanku .wrapper {
+  margin-top: 50px;
+  width: 100%;
+  height: 450px;
+  padding-top: 50px;
+  background: linear-gradient(rgba(253, 151, 151, 0.2), rgba(255, 151, 151, 0.2)), url(../img/WhatsApp\ Image\ 2020-10-18\ at\ 5.45.30\ PM.jpeg) center/cover no-repeat;
+}
+
+.thank-you {
+  text-align: center;
+  color: #FFF;
+  font-family: 'Pacifico';
+  -ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  padding-left: 80px;
+  margin-top: 90px;
+  margin-bottom: 25px;
+  width: 80%;
+}
+
+.thank,
+.you {
+  font-size: 55px;
+  line-height: 45px;
+}
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+footer { background-color: rgb(56, 56, 56); }
+
+footer {
+  font-size: 10px;
+  padding: 10px 0;
+  color: rgb(114, 114, 114);
+  text-align: center;
+}
+
+
+/*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) { 
+  .banner .wrapper {
+    height: 450px;
+  }
+  .about {
+    padding: 5px 0 20px;
+  }
+  .about ul li, 
+  .ourStory ul li {
+    display: block;
+    width: 50%;
+    margin: 30px auto;
+  }
+  .ourStory ul li {
+    border: 1px solid #fff;
+  }
+  .question ul li:hover {
+    border: 1px solid rgb(255, 246, 246) ;
+    background-color:  rgb(255, 122, 122);
+  }
+} 
+
+@media only screen and (max-width: 768px) {
+  header { position: relative; }
+  h1,
+  nav{ 
+    display: block;
+    width: 100%;
+  }
+
+  nav ul { text-align: center; }
+  
+  h1 {
+    width: 21%; 
+    margin: 0 auto;
+  }
+
+  .menu { float: none; }
+  h3 { font-size: 30px; }
+  .banner .wrapper { height: 350px; }
+  .menu li { padding: 0 5px ; }
+
+  .question ul li {
+    display: block;
+    margin-top: 15px;
+    width: 80%;
+  }
+  .about li figure:hover { transform: scale(1); }
+  .about li figure { height: 300px; }
+  .ourStory figure { height: 300px; }
+
+  .thank-you {
+    padding-left: 30px;
+    margin-top: 10px;
+  }
+}
